@@ -11,9 +11,7 @@ class Friends extends Component {
     //         friendData:
     //     })
     // }
-    render() { 
-        const  {friendData} = this.state;
-        
+    render() {  
         return ( 
          <div>
              <p className="header">Let's meet the hard working personalities</p>

@@ -24,17 +24,17 @@ componentDidMount(){
    })
 }
 
-alertBox=(data)=>{
+alertBox=()=>{
     alert("Hello");
 }
 
     render() { 
         const {name,Description,company,Technology,img,email} = this.state;
         const image = img ==="" ? "default":img;
-        console.log(img)
+        // console.log(img)
         return ( <div className="personalBg">
             <div className="row" >
-                <div className="col-sm-4" className="">
+                <div className="col-sm-4">
                      <img src={require(`../assets/img/${image}.png`)} alt="personalImg" className="personalCardImg"/>
                 </div>
                 <div className="col-sm-8">
@@ -43,6 +43,7 @@ alertBox=(data)=>{
                <section>
                <p>Government College of Engineering, Aurangabad</p>
               <p> Email:  {email} </p>
+    <p>Compant: {company}</p>
                     </section>
                     </section>
                 </div>

@@ -42,7 +42,7 @@ class ProjectDescription extends Component {
             <div className="row">
                 <div className="col-lg-3 projectTitle" key={id} >
                 
-                <img src={require(`../assets/img/${image}.png`)} className="projectImg"></img>
+                <img src={require(`../assets/img/${image}.png`)} className="projectImg" alt="projectImg"></img>
                 </div>
                 <div className="col-lg-9 projectTitle" >
                 <p>{Description}</p>
