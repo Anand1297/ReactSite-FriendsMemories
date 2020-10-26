@@ -21,7 +21,7 @@ class Friends extends Component {
                  const image= data.img === "" ? "default" : data.img
           return    <div className="col-sm-3">
               <Link to={`/friendDetails/${data.id-1}`}>
-              <img src={require(`../assets/img/${image}.png`)} className="friendimg" alt="PersonalImg"></img>
+              <img src={require(`../assets/friends/${image}.png`)} className="friendimg" alt="PersonalImg"></img>
                 <p className="friendName">{data.name} </p>
                 </Link>
           </div> 

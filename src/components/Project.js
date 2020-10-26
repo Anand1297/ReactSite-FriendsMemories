@@ -11,11 +11,11 @@ class Project extends Component {
         <div className="row " >{
         this.props.projectData.map(data=>{ 
 
-         const img= data.img===""?"default":data.img
+         const img= data.img===""?"no_image":data.img
             
         return  <div className="col-lg-4 projectTitle " key ={data.id} >
 
-           <img src={require(`../assets/img/${img}.png`)} alt="sakar img" ></img>
+           <img src={require(`../assets/project/${img}.png`)} alt="project img" ></img>
                 
         <Link to={`/projectDetails/${data.id-1}`}>
            <h5>{data.name}</h5>

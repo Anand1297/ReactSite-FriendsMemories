@@ -1,6 +1,9 @@
 .body{
   background-color: black ;
   font-family: "Comic Sans MS", cursive, sans-serif;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 /* 
 row{
@@ -24,8 +27,8 @@ border-radius: 10px;
 } */
 
 img{
-  height: 200px;
-  width: 70%;
+  height: 250px;
+  width: 80%;
   padding-bottom: 10px;
 border-radius: 20px;
 }
@@ -41,13 +44,27 @@ border-radius: 20px;
 
 .projectImg{
   height: 300px;
-  width: 300px;
+  width: 85%;
   border-radius: 10%;
 }
+
+.projectImg1{
+  height:300px;
+  width: 500px;
+  display: block;
+  border-radius: 10%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.projectImg1:hover{
+  opacity: 0.7;
+}
 .projectTitle{
-  padding-top: 10px;
+  padding-right: 20px;
   text-align: center;
-  color: gold;
+  font-size: 20px;
+  color: gold ;
 }
 .friendName{
    text-align: center;
@@ -59,8 +76,7 @@ border-radius: 20px;
    font-size: 40px;
    color: maroon;
   text-align: center;
-  
-  
+  border: 5px solid orangered;
  } 
 
 .personalCard{
@@ -79,20 +95,23 @@ border-radius: 20px;
 }
 
 .personalCardImg:hover{
-  background: blanchedalmond;
+ opacity: 0.7;
+ overflow: hidden;
 }
 
 .personalName{
 font-size:50px;
 padding-top: 40px;
 color: whitesmoke;
+color: black;
 }
 
 .personalBg{
   background-color: crimson;
-  margin: 10px;
-  width: auto;
+  width: 100%;
   height:100%;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  overflow: hidden;
 }
 
 section{
@@ -110,12 +129,15 @@ section{
 .personalDetails{
   text-align: center;
   color: whitesmoke;
+  font-size: 20px;
 }
 h4{
   background-color: darkgreen;
   border: 1px solid;
   color: whitesmoke;
   text-align: center;
+  padding: 10px;
+border-radius: 20px;
 }
 
 
@@ -125,4 +147,63 @@ h5{
 
 h5:hover{
   color: darkblue;
+}
+
+.fa {
+  padding: 10px;
+  font-size: 30px;
+  width: auto;
+  height: auto;
+  border-radius: 20px;
+  text-align: center;
+  margin: 20px 5px 2px;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+background: #3B5998;
+color: white;
+}
+
+.fa-twitter {
+background: #55ACEE;
+color: white;
+}
+
+.fa-google {
+background: #dd4b39;
+color: white;
+}
+
+.fa-linkedin {
+background: #007bb5;
+color: white;
+}
+
+.fa-github {
+background: black;
+color: white;
+}
+
+.fa-instagram {
+background:#FCAF45;
+color: white;
+}
+.achievement{
+  font-size: 30px;
+  color: green;
+}
+
+.friendMsg{
+  margin-left: 30%;
+  margin-right: 30%;
+  background-color: black;
+  padding: 3%;
+color: gold;
+border-radius: 50px;
+font-family: Ink Free;
+font-size: 25px;
 }

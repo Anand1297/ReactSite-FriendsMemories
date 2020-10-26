@@ -9,19 +9,21 @@ class ProjectDescription extends Component {
                 name:"",
                 img:"",
                 team:[],
-                Description:"" 
+                Description:"" ,
+                achievement:{position:"",img:[],folder:""}
     }
 
 
     componentDidMount(){
-        const   {id,year,name,img,team,Description} = this.props.Pdescription;
+        const   {id,year,name,img,team,Description,achievement} = this.props.Pdescription;
         this.setState(
             {   id:id,
                 year:year,
                 name:name,
                 img:img,
                 team:team,
-                Description:Description
+                Description:Description,
+                achievement:{position:achievement.position,img:achievement.img,folder:achievement.folder}
             }
             )
 
@@ -29,24 +31,37 @@ class ProjectDescription extends Component {
     }
    
     render() { 
-      const   {id,year,name,img,team,Description} = this.state;
-      const image = img ==="" ? "default":img
+      const   {id,year,name,img,team,Description,achievement} = this.state;
+      const image = img ==="" ? "no_image":img;
         return (
         <div class="body">
-            <Header/> 
+            <Header /> 
             <div className="jumbotron">
-                {name}
-        <p>{year}</p>
+               <p> {name}</p>
+              <p>{year}</p>
+              <p className="achievement"> <span style={{color:"maroon"}}>Achievement:</span> {achievement.position}</p>
                 
             </div>
             <div className="row">
-                <div className="col-lg-3 projectTitle" key={id} >
+                <div className="col-lg-5 projectTitle" key={id} >
                 
-                <img src={require(`../assets/img/${image}.png`)} className="projectImg" alt="projectImg"></img>
+                <img src={require(`../assets/project/${image}.png`)} className="projectImg" alt="project Img"></img>
                 </div>
-                <div className="col-lg-9 projectTitle" >
-                <p>{Description}</p>
+                <div className="col-lg-7" >
+                <p className="projectTitle">{Description}</p>
                 </div>
+            </div>
+            <br/>
+            <hr style={{background:"orangered",margin:"20px"}}/>
+            <div class="row">
+                {  
+                    achievement.img.map(data=>{
+                     //   const img =require(`../assets/project/${achievement.folder}/${data}.png`) ? 
+                       return <div className="col-lg-6">     
+                             <img src={require(`../assets/project/${achievement.folder}/${data}.png`)} className="projectImg1" alt={data}></img>
+                              </div>
+                                 })
+                }
             </div>
              <Friends friendData={team}/>
             <Footer/>
