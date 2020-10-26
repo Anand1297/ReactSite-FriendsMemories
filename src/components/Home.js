@@ -3,7 +3,6 @@ import Header from './Header'
 import Project from './Project'
 import Friends from './Friends'
 import Footer from './Footer'
-import LoginPage from './LoginPage';
 //import {Redirect} from 'react-router-dom';
  
 
