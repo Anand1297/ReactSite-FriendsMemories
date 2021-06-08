@@ -5,7 +5,7 @@ import FriendDescription from './components/FriendDescription';
 import ProjectDescription from './components/ProjectDescription'
 import Home from './components/Home';
 import {project , friend} from './components/data';
-import { Redirect, Route, Switch } from 'react-router-dom';
+import { Redirect, Route, Switch,BrowserRouter } from 'react-router-dom';
 import PageNotFound from './components/PageNotFound';
 import AboutUs from './components/AboutUs'; 
 import Project from './components/Project';
@@ -17,6 +17,7 @@ class App extends Component {
   render() { 
    
     return (
+      <BrowserRouter>
        <Switch>
       <Route path="/"   exact render={()=>(
       <Home  project={project} friend={friend} /> )}
@@ -46,7 +47,7 @@ class App extends Component {
         <Route path="/Project"  component={Project}/>     
       <Redirect  to={PageNotFound}/>
     </Switch>
-   
+   </BrowserRouter>
         );
   }
 }
