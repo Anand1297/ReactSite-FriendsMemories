@@ -25,7 +25,7 @@ class App extends Component {
             render={(props)=>{
               let friendId=props.location.pathname.replace('/friendDetails/','');
               //console.log(typeof(friendId))
-              let validId= friendId> friend.length-1 ? "0": friendId;
+              let validId=  Number.isInteger(parseInt(friendId)) ?friendId> friend.length-1 ? "0": friendId :"0";  
               //console.log(validId);
               // console.log(friend[validId]);
               return (<FriendDescription Fdescription={friend[validId]}/>)
@@ -37,8 +37,9 @@ class App extends Component {
       <Route  path="/projectDetails/:id" 
        render={(props)=>{
         let projectId= props.location.pathname.replace('/projectDetails/' ,'');
-        let validId= projectId> project.length-1 ? "0": projectId;
-        // console.log(project[validId]);
+        
+        let validId= Number.isInteger(parseInt(projectId)) ? projectId> project.length-1  ? "0": projectId :"0";
+         console.log(project[validId]);
         return ( <ProjectDescription  Pdescription={project[validId]}/> )}
       } exact/>
         <Route path="/AboutUs" component={AboutUs}/> 
