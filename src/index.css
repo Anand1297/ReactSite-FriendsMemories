@@ -199,12 +199,12 @@ color: white;
 }
 
 .friendMsg{
-  margin-left: 30%;
-  margin-right: 30%;
+  margin-left: 15%;
+  margin-right: 15%;
   background-color: black;
   padding: 3%;
 color: gold;
-border-radius: 50px;
+border-radius: 2%;
 font-family: Ink Free;
-font-size: 25px;
+font-size: 18px;
 }

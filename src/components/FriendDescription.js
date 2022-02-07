@@ -81,7 +81,8 @@ alertBox=()=>{
                <h5 style={{
                    color:"red",
                    textAlign:"right",
-                   paddingTop:"20px"
+                   paddingTop:"20px",
+                   fontsize:"10px"
                }}>Message from a friend ...</h5>
             </div>
         <Footer/>
