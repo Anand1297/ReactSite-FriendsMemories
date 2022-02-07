@@ -53,11 +53,12 @@ class ProjectDescription extends Component {
             </div>
             <br/>
             <hr style={{background:"orangered",margin:"20px"}}/>
+            <h1 className="header">Gallery</h1>
             <div class="row">
                 {  
                     achievement.img.map(data=>{
                      //   const img =require(`../assets/project/${achievement.folder}/${data}.png`) ? 
-                       return <div className="col-lg-6">     
+                       return <div className="col-lg-4">     
                              <img src={require(`../assets/project/${achievement.folder}/${data}.png`)} className="projectImg1" alt={data}></img>
                               </div>
                                  })
