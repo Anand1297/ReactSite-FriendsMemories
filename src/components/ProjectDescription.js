@@ -58,8 +58,8 @@ class ProjectDescription extends Component {
                 {  
                     achievement.img.map(data=>{
                      //   const img =require(`../assets/project/${achievement.folder}/${data}.png`) ? 
-                       return <div className="col-lg-4">     
-                             <img src={require(`../assets/project/${achievement.folder}/${data}.png`)} className="projectImg1" alt={data}></img>
+                       return <div className="col-lg-4 projectTitle">     
+                             <img src={require(`../assets/project/${achievement.folder}/${data}.png`)}  alt={data}></img>
                               </div>
                                  })
                 }
